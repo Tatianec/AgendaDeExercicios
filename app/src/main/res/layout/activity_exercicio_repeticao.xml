@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="view.ExercicioRepeticaoActivity">
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="311dp"
+        android:layout_height="43dp"
+        android:layout_margin="16dp"
+        android:hint="Nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextRepeticoes"
+        android:layout_width="314dp"
+        android:layout_height="39dp"
+        android:layout_margin="16dp"
+        android:hint="Repetições"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNome" />
+
+    <EditText
+        android:id="@+id/editTextPeso"
+        android:layout_width="316dp"
+        android:layout_height="39dp"
+        android:layout_margin="16dp"
+        android:hint="Peso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextRepeticoes" />
+
+    <EditText
+        android:id="@+id/editTextDescanso"
+        android:layout_width="309dp"
+        android:layout_height="42dp"
+        android:layout_margin="16dp"
+        android:hint="Descanso (segundos)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPeso" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="293dp"
+        android:layout_height="293dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescanso" />
+
+    <TextView
+        android:id="@+id/textViewDataSelecionada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/calendarView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextDescanso" />
+
+    <Button
+        android:id="@+id/buttonSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="44dp"
+        android:text="Salvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendarView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

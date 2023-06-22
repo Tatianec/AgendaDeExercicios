@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "980418564521",
+    "project_id": "exercicios-6e0cd",
+    "storage_bucket": "exercicios-6e0cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980418564521:android:a45c266ef4eb07afe674b8",
+        "android_client_info": {
+          "package_name": "com.example.agenda_exercicio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980418564521-q6m9vfdsvhcj052o975r6jj6s07cq7pe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjv2-nQASOA6vIriRfDjrecLGNDMj5-l8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980418564521-q6m9vfdsvhcj052o975r6jj6s07cq7pe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
