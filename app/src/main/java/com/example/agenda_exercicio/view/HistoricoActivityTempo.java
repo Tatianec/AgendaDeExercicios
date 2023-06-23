@@ -28,6 +28,7 @@ public class HistoricoActivityTempo extends AppCompatActivity
         setListener();
         presenter = new MainTempoPresenter(this);
 
+
     }
 
     @Override

@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".view.TimerActivity">
+
+    <EditText
+        android:id="@+id/minutesInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Minutos"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/secondsInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Segundos"
+        android:layout_below="@id/minutesInput"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Timer"
+        android:layout_below="@id/secondsInput"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/countdownText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Tempo Restante: 00:00"
+        android:layout_below="@id/startButton" />
+
+</RelativeLayout>

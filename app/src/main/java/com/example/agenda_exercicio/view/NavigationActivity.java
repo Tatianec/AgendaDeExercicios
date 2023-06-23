@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.agenda_exercicio.R;
 
@@ -18,6 +19,14 @@ public class NavigationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
+        Button buttonRegistros = findViewById(R.id.butRegistros);
+        buttonRegistros.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirRegistros();
+            }
+        });
     }
 
     @Override
@@ -34,7 +43,7 @@ public class NavigationActivity extends AppCompatActivity {
             abrirActivityNewExercise(item.getActionView());
             return true;
         } else if (id == R.id.menu_timer) {
-            abrirActivity2(item.getActionView());
+            abrirActivityTimer(item.getActionView());
             return true;
         } else if (id == R.id.menu_historico_tempo) {
             abrirHistoricoTempo();
@@ -53,8 +62,8 @@ public class NavigationActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void abrirActivity2(View view) {
-        Intent intent = new Intent(this, NewExerciseActivity.class);
+    public void abrirActivityTimer(View view) {
+        Intent intent = new Intent(this, TimerActivity.class);
         startActivity(intent);
     }
 

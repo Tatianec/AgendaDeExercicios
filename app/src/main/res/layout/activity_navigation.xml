@@ -24,7 +24,7 @@
         android:layout_height="46dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="10dp"
-        android:onClick="abrirActivity2"
+        android:onClick="abrirActivityTimer"
         android:text="Timer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button1" />
@@ -35,7 +35,6 @@
         android:layout_height="46dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="10dp"
-        android:onClick="abrirRegistros"
         android:text="Registros"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/butTimer" />

@@ -15,7 +15,10 @@
         android:theme="@style/Theme.Agenda_Exercicio"
         tools:targetApi="31">
         <activity
-            android:name=".DetalhesHistoricoActivity"
+            android:name=".view.TimerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.DetalhesHistoricoActivity"
             android:exported="false" />
         <activity
             android:name=".view.HistoricoActivityRepeticao"
