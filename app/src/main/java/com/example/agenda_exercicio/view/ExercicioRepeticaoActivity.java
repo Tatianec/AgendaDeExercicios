@@ -56,7 +56,6 @@ public class ExercicioRepeticaoActivity extends AppCompatActivity {
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                // O mês é baseado em zero, então é necessário adicionar 1 ao mês selecionado
                 month = month + 1;
 
                 String dia = String.format(Locale.getDefault(), "%02d/%02d/%d", dayOfMonth, month, year);

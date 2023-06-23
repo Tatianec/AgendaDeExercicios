@@ -33,9 +33,11 @@ public class ExercicioTempoAdapter extends FirestoreRecyclerAdapter<ExercicioTem
 
     @Override
     protected void onBindViewHolder(@NonNull ExercicioTempoViewHolder holder, int position, @NonNull ExercicioTempo model) {
-        String distanciaString = String.valueOf(model.getDistancia());
+        String distancia = String.valueOf(model.getDistancia());
+        String tempo = String.valueOf(model.getTempo());
+        String data = model.getData();
 
-        holder.textViewDistancia.setText(distanciaString);
+        holder.textViewDistancia.setText( distancia + "'s, " + tempo + "(m), " + data);
 
     }
 

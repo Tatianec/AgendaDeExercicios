@@ -31,7 +31,7 @@ public class MainTempoPresenter implements MainMVP.Presenter {
     }
 
     public void populate(RecyclerView recyclerView) {
-        Query query = database.collection(Constants.EXERCICIOS_COLLECTION);
+        Query query = database.collection(Constants.EXERCICIOS_COLLECTION).orderBy(Constants.ATTR_DATA);
         FirestoreRecyclerOptions<ExercicioTempo> options = new FirestoreRecyclerOptions.Builder<ExercicioTempo>()
                 .setQuery(query, ExercicioTempo.class)
                 .build();

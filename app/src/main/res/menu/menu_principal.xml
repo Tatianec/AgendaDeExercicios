@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/menu_add_exercicio"
+        android:title="Novo Exercicio"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_timer"
+        android:title="Add Timer"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_registros"
+        android:title="Registros"
+        app:showAsAction="never">
+            <menu>
+                <item
+                    android:id="@+id/menu_historico_repeticao"
+                    android:title="Historico Repetição" />
+                <item
+                    android:id="@+id/menu_historico_tempo"
+                    android:title="Historico Tempo" />
+            </menu>
+    </item>
+
+</menu>

@@ -6,4 +6,5 @@ public class Constants {
     public static final String EXERCICIOS_COLLECTION = "ExerciciosTempo";
     public static final String ATTR_DISTANCE = "distancia";
     public static final String ATTR_TIME = "tempo";
+    public static final String ATTR_DATA = "data";
 }
