@@ -3,9 +3,10 @@ package com.example.agenda_exercicio.view;
 import android.Manifest;
 import android.app.DatePickerDialog;
 import android.content.pm.PackageManager;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -16,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.agenda_exercicio.R;
+import com.example.agenda_exercicio.constant.Constants;
 import com.example.agenda_exercicio.dao.LocationDao;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -40,9 +42,8 @@ public class ExercicioTempoActivity extends AppCompatActivity {
 
     private boolean isTracking = false;
     private LocationManager locationManager;
-    private LocationListener locationListener;
+
     private LocationDao locationDao;
-    private double totalDistance;
 
     private Calendar calendar;
     private SimpleDateFormat dateFormat;
@@ -53,14 +54,9 @@ public class ExercicioTempoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_exercicio_tempo);
 
         db = FirebaseFirestore.getInstance();
-        exerciciosCollection = db.collection("ExerciciosTempo");
+        exerciciosCollection = db.collection(Constants.EXERCICIOS_COLLECTION);
 
-        checkBoxLocation = findViewById(R.id.checkBoxLocation);
-        editTextDistance = findViewById(R.id.editTextDistance);
-        editTextTime = findViewById(R.id.editTextTime);
-        buttonSave = findViewById(R.id.buttonSave);
-        buttonStartStop = findViewById(R.id.buttonStartStop);
-        buttonSelectDate = findViewById(R.id.buttonSelectDate);
+        findById();
 
         checkBoxLocation.setOnCheckedChangeListener((buttonView, isChecked) -> {
             updateUI();
@@ -104,6 +100,26 @@ public class ExercicioTempoActivity extends AppCompatActivity {
         dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
     }
 
+    private void findById() {
+        checkBoxLocation = findViewById(R.id.checkBoxLocation);
+        editTextDistance = findViewById(R.id.editTextDistance);
+        editTextTime = findViewById(R.id.editTextTime);
+        buttonSave = findViewById(R.id.buttonSave);
+        buttonStartStop = findViewById(R.id.buttonStartStop);
+        buttonSelectDate = findViewById(R.id.buttonSelectDate);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuHelper menuHelper = new MenuHelper(this);
+        return menuHelper.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        MenuHelper menuHelper = new MenuHelper(this);
+        return menuHelper.onOptionsItemSelected(item);
+    }
     private void updateUI() {
         boolean isExternal = checkBoxLocation.isChecked();
 

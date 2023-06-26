@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.agenda_exercicio.R;
 import com.example.agenda_exercicio.mvp.MainMVP;
@@ -13,15 +15,26 @@ public class HistoricoActivityRepeticao extends AppCompatActivity implements Mai
 
     private MainMVP.Presenter presenter;
     private RecyclerView mRecyclerView;
+    private MenuHelper menuHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historico_repeticao);
 
+        menuHelper = new MenuHelper(this);
         findById();
         presenter = new MainRepeticaoPresenter(this);
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        return menuHelper.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return menuHelper.onOptionsItemSelected(item);
     }
 
     @Override

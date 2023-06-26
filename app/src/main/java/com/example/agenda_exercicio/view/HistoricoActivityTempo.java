@@ -2,6 +2,7 @@ package com.example.agenda_exercicio.view;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,21 +15,30 @@ import com.example.agenda_exercicio.presenter.MainTempoPresenter;
 public class HistoricoActivityTempo extends AppCompatActivity
         implements MainMVP.View, View.OnClickListener {
 
-
     private MainMVP.Presenter presenter;
-
     private RecyclerView mRecyclerView;
+    private MenuHelper menuHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historico_tempo);
 
+        menuHelper = new MenuHelper(this);
         findById();
-        setListener();
         presenter = new MainTempoPresenter(this);
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        return menuHelper.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return menuHelper.onOptionsItemSelected(item);
     }
 
     @Override
@@ -50,12 +60,8 @@ public class HistoricoActivityTempo extends AppCompatActivity
         super.onDestroy();
     }
 
-    private void setListener() {
-    }
-
     @Override
     public void onClick(View view) {
-
     }
 
     @Override

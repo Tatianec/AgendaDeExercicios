@@ -46,13 +46,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPeso" />
 
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="293dp"
-        android:layout_height="293dp"
-        android:layout_marginTop="32dp"
+    <Button
+        android:id="@+id/buttonSelectDate"
+        android:layout_width="276dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:text="Selecionar Data"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextDescanso" />
 
@@ -60,7 +61,6 @@
         android:id="@+id/textViewDataSelecionada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/calendarView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextDescanso" />
@@ -70,10 +70,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:layout_marginTop="44dp"
         android:text="Salvar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/calendarView" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSelectDate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

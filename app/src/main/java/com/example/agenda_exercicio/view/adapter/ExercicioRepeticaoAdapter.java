@@ -21,7 +21,7 @@ public class ExercicioRepeticaoAdapter extends FirestoreRecyclerAdapter<Exercici
         super(options);
     }
 
-    public void setClickListener(ItemCliclListener clickListener) {
+    public void setClickListener(ItemCliclListener clickListener){
         this.clickListener = clickListener;
     }
 
@@ -44,12 +44,18 @@ public class ExercicioRepeticaoAdapter extends FirestoreRecyclerAdapter<Exercici
         holder.textViewExercicioInfo.setText(exercicioInfo);
     }
 
-    static class ExercicioRepeticaoViewHolder extends RecyclerView.ViewHolder {
+    public class ExercicioRepeticaoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView textViewExercicioInfo;
 
         public ExercicioRepeticaoViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewExercicioInfo = itemView.findViewById(R.id.textview_nome);
         }
+
+        @Override
+        public void onClick(View v) {
+            clickListener.onClick( getSnapshots().getSnapshot(getBindingAdapterPosition()).getId() );
+        }
     }
+
 }

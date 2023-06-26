@@ -27,17 +27,15 @@ public class LocationDao implements LocationListener {
 
     @Override
     public void onProviderEnabled(String provider) {
-        // Método chamado quando o provedor de localização é ativado
     }
 
     @Override
     public void onProviderDisabled(String provider) {
-        // Método chamado quando o provedor de localização é desativado
     }
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
-        // Método chamado quando o status do provedor de localização é alterado
+
     }
 
     public double getTotalDistance() {

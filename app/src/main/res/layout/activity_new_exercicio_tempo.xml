@@ -62,7 +62,7 @@
         android:id="@+id/textViewDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="20dp"
         android:text="Data:"
         android:textSize="20sp"
@@ -71,11 +71,13 @@
 
     <Button
         android:id="@+id/buttonSelectDate"
-        android:layout_width="182dp"
-        android:layout_height="72dp"
+        android:layout_width="276dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
         android:text="Selecionar Data"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toEndOf="@+id/textViewDate"
         app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
 
     <Button
@@ -95,7 +97,6 @@
         android:layout_marginTop="20dp"
         android:text="Começar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSelectDate" />
 

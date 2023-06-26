@@ -26,4 +26,14 @@
             </menu>
     </item>
 
+    <item
+        android:id="@+id/menu_relatorio"
+        android:title="Relatório"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_sair"
+        android:title="Sair"
+        app:showAsAction="never" />
+
 </menu>
