@@ -25,9 +25,6 @@
             android:name=".view.TimerActivity"
             android:exported="false" />
         <activity
-            android:name=".view.DetalhesHistoricoActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.HistoricoActivityRepeticao"
             android:exported="false" />
         <activity

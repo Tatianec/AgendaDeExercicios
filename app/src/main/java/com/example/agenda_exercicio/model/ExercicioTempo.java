@@ -1,7 +1,5 @@
 package com.example.agenda_exercicio.model;
 
-import com.google.firebase.database.PropertyName;
-
 public class ExercicioTempo {
 
     public Double distancia;

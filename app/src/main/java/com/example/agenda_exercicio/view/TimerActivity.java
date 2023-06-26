@@ -37,7 +37,7 @@ public class TimerActivity extends AppCompatActivity {
     private static final String CHANNEL_ID = "channel_id";
     private static final CharSequence CHANNEL_NAME = "Channel Name";
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint( "MissingInflatedId" )
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,14 +51,14 @@ public class TimerActivity extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (timerRunning) {
+                if ( timerRunning ) {
                     stopTimer();
                     stopAlarm();
                 } else {
                     String minutesString = minutesInput.getText().toString().trim();
                     String secondsString = secondsInput.getText().toString().trim();
 
-                    if (minutesString.isEmpty() && secondsString.isEmpty()) {
+                    if ( minutesString.isEmpty() && secondsString.isEmpty() ) {
                         Toast.makeText(TimerActivity.this, "Digite os minutos e/ou segundos", Toast.LENGTH_SHORT).show();
                     } else {
                         int minutes = minutesString.isEmpty() ? 0 : Integer.parseInt(minutesString);
@@ -132,15 +132,15 @@ public class TimerActivity extends AppCompatActivity {
     }
 
     private void updateCountdownText() {
-        int minutes = (int) (timeLeftInMillis / 1000) / 60;
-        int seconds = (int) (timeLeftInMillis / 1000) % 60;
+        int minutes = ( int ) (timeLeftInMillis / 1000) / 60;
+        int seconds = ( int ) (timeLeftInMillis / 1000) % 60;
 
         String timeLeftFormatted = String.format("%02d:%02d", minutes, seconds);
         countdownText.setText("Tempo Restante: " + timeLeftFormatted);
     }
 
     private void createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if ( Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ) {
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_HIGH);
             channel.setDescription("Channel Description");
             NotificationManager manager = getSystemService(NotificationManager.class);
@@ -149,13 +149,13 @@ public class TimerActivity extends AppCompatActivity {
     }
 
     private void playAlarm() {
-        if (ringtone != null) {
+        if ( ringtone != null ) {
             ringtone.play();
         }
     }
 
     private void stopAlarm() {
-        if (ringtone != null && ringtone.isPlaying()) {
+        if ( ringtone != null && ringtone.isPlaying() ) {
             ringtone.stop();
         }
     }
